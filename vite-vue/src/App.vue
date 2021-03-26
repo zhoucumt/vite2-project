@@ -1,9 +1,12 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+  <img alt="Vue logo" :src="logo" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <script setup>
+// 将资源引入为URL，并在模板中使用该变量
+import logo from '@/assets/logo.png';
 import HelloWorld from './components/HelloWorld.vue'
 
 // This starter template is using Vue 3 experimental <script setup> SFCs
