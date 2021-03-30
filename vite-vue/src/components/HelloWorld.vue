@@ -11,16 +11,27 @@
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+
+  <ul>
+    <li v-for="c in courses" :key="c.id">{{c.name}}</li>
+  </ul>
 </template>
 
-<script setup>
-import { defineProps, reactive } from 'vue'
+<script setup lang="ts">
+  import { defineProps, reactive } from 'vue'
 
-defineProps({
-  msg: String
-})
+  defineProps({
+    msg: String
+  })
 
-const state = reactive({ count: 0 })
+  const state = reactive({ count: 0 })
+
+  type Course = {
+    id: number,
+    name: string
+  }
+  const courses = reactive<Course[]>([{id: 1, name: 'A'}])
+
 </script>
 
 <style scoped>
