@@ -21,5 +21,6 @@ export default defineConfig({
       }
     }
   },
-  plugins: [vue(), viteMockServe({})]
+  // 如果不是ts文件，这里需要加水supportTs: false
+  plugins: [vue(), viteMockServe({supportTs: false})]
 })

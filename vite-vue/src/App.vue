@@ -13,7 +13,7 @@
   import HelloWorld from './components/HelloWorld.vue'
   import classes from './App.module.less'
 
-  fetch('/api/users').then(res => res.json()).then(res => {
+  fetch('/api-dev/users').then(res => res.json()).then(res => {
     console.log(res);
   })
 
