@@ -3,28 +3,28 @@ export default function orderPlugin() {
     name: 'vite-plugin-order', // 必须的，将会显示在 warning 和 error 中
 
     options(opts) {
-      console.log('======options======: ', opts);
+      // console.log('======options======: ', opts);
     },
 
     buildStart() {
-      console.log('======buildStart======: ');
+      // console.log('======buildStart======: ');
     },
 
     config(config) {
-      console.log('======config======: ', config);
+      // console.log('======config======: ', config);
       return {};
     },
 
     configResolved(resolvedConfig) {
-      console.log('======configResolved======: ');
+      // console.log('======configResolved======: ');
     },
 
     configureServer(server) {
-      console.log('======configureServer======: ');
+      // console.log('======configureServer======: ');
     },
 
     transformIndexHtml(html) {
-      console.log('======transformIndexHtml======: ');
+      // console.log('======transformIndexHtml======: ');
       return html;
       return html.replace(
         /<title>(.*?)<\/title>/,
@@ -33,7 +33,7 @@ export default function orderPlugin() {
     },
 
     resolveId(id) {
-      console.log('======resolveId======: ', id);
+      // console.log('======resolveId======: ', id);
       // if (id === virtualFileId) {
       //   return virtualFileId
       // }
@@ -41,7 +41,7 @@ export default function orderPlugin() {
     },
 
     load(id) {
-      console.log('======load======: ', id);
+      // console.log('======load======: ', id);
       // if (id === virtualFileId) {
       //   return `export const msg = "from virtual file"`
       // }
@@ -49,7 +49,7 @@ export default function orderPlugin() {
     },
 
     transform(code, id) {
-      console.log('======transform======: ', id);
+      // console.log('======transform======: ', id);
       return code;
     }
   }
